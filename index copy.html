@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>projet bassam</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <ul class="nav-links">
+        <li><a class="selected" href="#">Accueil</a></li>
+        <li><a href="Notre Histoire.html">Notre Histoire</a></li>
+        <img src="" alt="logo">
+        <li><a href="culture.html">Nos cultures</a></li>
+        <li><a href="tourisme.html">Tourisme</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="banniere">
+  <div class="contenu-banniere">
+    <div>
+      <h1>IMMERSION AU COEUR<br>DE BASSAM</h1>
+      <button>Découvrir Bassam</button>
+    </div>
+    <div class="images-droite">
+      <img src="img/plage.jpg" alt="Plage">
+      <img src="img/hotel.jpg" alt="Hôtel" class="hot">
+      <img src="img/culture.jpg" alt="Culture">
+    </div>
+  </div>
+</div>
+ 
+
+ 
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 MonSite. Tous droits réservés.</p>
+      <p>
+        <a href="#"></a>
+        <a href="#"></a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+    crossorigin="anonymous"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let index = 0;
+      const images = document.querySelectorAll('.carrousel-img');
+      setInterval(() => {
+        images[index].classList.remove('active');
+        index = (index + 1) % images.length;
+        images[index].classList.add('active');
+      }, 2500); // Change d'image toutes les 2,5 secondes
+    });
+  </script>
+
+</body>
+
+</html>

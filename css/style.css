@@ -1,0 +1,671 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barre de navigation avec logo au centre */
+
+nav {
+  background: #9b5b22;
+  padding: 10px 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+ a:hover{
+  color: yellow;
+}
+.logo-li {
+  /* Pour que le logo ne prenne pas de marge excessive */
+  margin: 0 10px;
+}
+.logo {
+  height: 38px;
+  vertical-align: middle;
+  display: block;
+}
+
+.selected {
+  position: relative;
+  color: #222; 
+  font-weight: bold;
+}
+
+/* Soulignement animé et épais */
+.selected::after {
+  content: "";        /*soulignement*/
+  display: block;
+  width: 100%;
+  height: 3px; 
+  background: #ffd700; 
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Décalage sous le texte */
+}
+
+.selected::after {
+  transition: width 0.3s;
+}
+
+
+/* Section principale avec image de fond */
+.banniere {
+  background: url('/img/background1.jpg') center/cover no-repeat;
+  min-height: 500px;
+  padding: 40px 20px;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #74bcec;
+  border-radius: 5px;
+}
+
+.contenu-banniere {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 900px;
+}
+.banniere h1 {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.banniere button {
+  width: 80%;
+  margin-top: 85px; 
+  padding: 10px 25px;
+  background: #9b5b22;
+  color: whitesmoke;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+
+.images-droite {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 30px;
+}
+.img1:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  border-color: #9b5b22;
+}
+.img2:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  border-color: #9b5b22;
+}
+.img3:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  border-color: #9b5b22;
+}
+
+
+.images-droite img {
+  width: 210px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #9b5b22;
+  display: block;
+  margin-right: 5px;
+  justify-content: space-between;
+}
+
+/* Décaler la 2ème image vers la gauche */
+.images-droite img:nth-child(2) {
+  margin-left: 85px;
+}
+.container h1{
+  text-align: center;
+  margin-top: 1%;
+}
+
+.container{
+  width: 100%;
+  background: #7a5a36;
+  border: 1px solid #7a5a36;
+  border-radius: 5px;
+}
+.cartes-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap; /* Permet le retour à la ligne si pas assez de place */
+}
+
+.carte {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  overflow: hidden;
+  width: 250px;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d2b48c;
+}
+
+.carte img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+.carte-texte {
+  background: #d2b48c;
+  color: #222;
+  padding: 15px 10px;
+  font-size: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90px;
+  box-sizing: border-box;
+}
+.carte a {
+  color: black;
+}
+.carte a:hover{
+  color: gray;
+}
+.carte:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  border-color: #9b5b22;
+}
+
+h2{
+  text-align: center;
+}
+.section-presentation {
+  background: url('/img/femmes.jpg') center/cover no-repeat; /* Image de fond centrée et qui couvre toute la section */
+  min-height: 800px;                                   
+  display: flex;                                      
+  align-items: center;                                 
+  justify-content: center;                             
+  position: relative;                                  /* Pour pouvoir ajouter d'autres éléments positionnés si besoin */
+  margin: 40px 0;                                      /* Marge au-dessus et en dessous de la section */
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.presentation-contenu {
+  background: rgba(255,255,255,0.7);                   
+  padding: 30px 20px;                                  /* Espace intérieur autour du texte */
+  border-radius: 12px;                                 
+  text-align: center;                                  
+  max-width: 700px;                                    
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);             /* Légère ombre portée */
+}
+.presentation-contenu:hover{
+   transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  border-color: white;
+}
+
+.presentation-contenu p {
+  color: #333;                                         
+  font-size: 1.08rem;                                  
+  margin-bottom: 25px;                                 
+  line-height: 1.5;                                    /* Hauteur de ligne pour l'aération */
+}
+.btn-presentation {
+  display: inline-block;                               
+  background: #a97c50;                                 
+  color: #fff;                                         
+  font-weight: bold;                                   /* Texte en gras */
+  padding: 14px 32px;                                  /* Espace intérieur du bouton */
+  border-radius: 8px;                                  
+  text-decoration: none;                               
+  font-size: 1.1rem;                                   
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);              /* Légère ombre sous le bouton */
+  transition: background 0.2s;                         /* Animation douce au survol */
+}
+.btn-presentation:hover {
+  background: #7a5a36;                                 /* Couleur du bouton au survol */
+}
+
+h3{
+  text-align: center;
+}
+.section-plage {
+  background: url('/img/plage2.jpg') center/cover no-repeat; /* Image de fond */
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 40px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.plage-contenu {
+  background: rgba(255,255,255,0.7); 
+  padding: 30px 20px 40px 20px;      /* Plus de padding en bas pour le bouton */
+  border-radius: 12px;
+  text-align: center;
+  max-width: 650px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  position: relative;
+}
+
+.plage-contenu:hover{
+   transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  border-color: white;
+}
+
+.plage-contenu p {
+  color: #333;
+  font-size: 1.08rem;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+.btn-plage {
+  display: inline-block;
+  background: #a97c50;
+  color: #fff;
+  font-weight: bold;
+  padding: 14px 38px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s;
+  position: absolute;
+  right: 30px;
+  bottom: 5px;
+}
+.btn-plage:hover {
+  background: #7a5a36;
+}
+
+ /* css de nos cultures */
+ /* Image de fond sur tout le contenu principal */
+.main-bg {
+  min-height: 100vh;
+  background: url('/img/fond\ de\ cult.jpeg') center/cover no-repeat fixed;
+  padding: 40px 0 0 0;
+  box-sizing: border-box;
+}
+
+/* Sections alternées */
+.section-paire, .section-impaire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  max-width: 900px;
+  background: rgba(255,255,255,0.85); /* Fond blanc semi-transparent pour la lisibilité */
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.section-paire img, .section-impaire img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.texte-section {
+  max-width: 400px;
+}
+
+.section-paire {
+  flex-direction: row; /* Image à gauche, texte à droite */
+}
+.section-impaire {
+  flex-direction: row-reverse; /* Texte à gauche, image à droite */
+}
+ .section-droit, .section-gauche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  padding: 20px 0;
+}
+
+.section-droit img, .section-gauche img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.texte-section {
+  max-width: 400px;
+}
+
+.section-droit {
+  flex-direction: row; /* Image à gauche, texte à droite */
+}
+.section-gauche {
+  flex-direction: row-reverse; /* Texte à gauche, image à droite */
+}
+
+/* css tourisme */
+/* Image de fond sur tout le contenu principal */
+.zone-fond {
+  min-height: 100vh;
+  background: url('/img/maxresdefault.jpg') center/cover no-repeat fixed;
+  padding: 40px 0 0 0;
+  box-sizing: border-box;
+}
+
+/* Blocs alternés */
+.ligne-alternee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  max-width: 900px;
+  background: rgba(255,255,255,0.85); /* Fond blanc semi-transparent pour la lisibilité */
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.img-alternee {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.texte-alternee {
+  max-width: 400px;
+}
+
+/* Alternance des directions */
+.alternance-gauche {
+  flex-direction: row; /* Image à gauche, texte à droite */
+}
+.alternance-droite {
+  flex-direction: row-reverse; /* Texte à gauche, image à droite */
+}
+
+
+.footer {
+  background: #232323;                
+  color: #fff;                        
+  padding: 30px 0 10px 0;             /* Espace en haut, en bas */
+  font-family: Arial, sans-serif;      /* Police du texte */
+  border-top: 2px solid #d2b48c;      
+  font-size: 0.98rem;                
+}
+.footer-container {
+  display: flex;                     
+  justify-content: space-between;     
+  align-items: flex-start;            
+  max-width: 1100px;                  
+  margin: 0 auto;                     /* Centre le footer horizontalement */
+  gap: 30px;                          
+  flex-wrap: wrap;                    
+  padding: 0 20px;                    
+}
+.footer-col {
+  flex: 1 1 180px;                    /* Chaque colonne prend la même place, min 180px */
+  min-width: 180px;                   
+  margin-bottom: 20px;                /* Espace sous chaque colonne */
+}
+.slogan {
+  font-size: 1.2rem;                  
+  font-weight: bold;                  /* Slogan en gras */
+  line-height: 1.3;                   /* Hauteur de ligne pour l'aération */
+  color: #fff;                        
+}
+.footer-col h4 {
+  color: #d2b48c;                     
+  margin-bottom: 8px;                 /* Espace sous le titre */
+  font-size: 1.05rem;                 
+}
+.footer-col a {
+  color: #d2b48c;                     
+  text-decoration: none;              
+  font-weight: bold;                  /* Liens en gras */
+  display: inline-block;              /* Pour pouvoir mettre une marge */
+  margin-top: 8px;                   
+  font-size: 0.97rem;                 
+}
+.footer-col a:hover {
+  text-decoration: underline;         /* Soulignement au survol */
+}
+.footer-social {
+  margin-bottom: 10px;                /* Espace sous les icônes sociales */
+}
+.footer-social a {
+  font-size: 1.3rem;                  
+  margin-right: 10px;                 /* Espace entre les icônes */
+  color: #fff;                        
+  transition: color 0.2s;             
+}
+.footer-social a:hover {
+  color: #d2b48c;                     
+}
+.footer-map iframe {
+  border-radius: 6px;                 
+  margin-top: 5px;                    
+  width: 100%;                        
+  min-width: 250px;                  
+  min-height: 150px;                  
+  background: #fff;                   
+}
+
+
+/*responsive Navbar */
+@media (max-width: 700px) {
+  /* Navbar en colonne */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo {
+    height: 32px;
+  }
+
+  /* Bannière : texte et images l'un en dessous de l'autre */
+  .contenu-banniere {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .images-droite {
+    flex-direction: row;
+    margin-left: 0;
+    gap: 8px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .images-droite img {
+    width: 80px;
+    height: 50px;
+  }
+
+  .banniere {
+    padding: 20px 5px;
+    min-height: 250px;
+  }
+
+  .banniere h1 {
+    font-size: 1.2rem;
+    padding: 8px 10px;
+  }
+
+  .banniere button {
+    font-size: 0.95rem;
+    padding: 8px 15px;
+  }
+}
+
+
+/*Responsive pour les cartes  */
+@media (max-width: 900px) {
+  .cartes-section {
+    gap: 12px;
+  }
+  .carte {
+    width: 45%;
+    min-width: 200px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cartes-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .carte {
+    width: 95%;
+    min-width: 0;
+  }
+}
+
+/*Responsive pour nos cultures */
+@media (max-width: 700px) {                            /* Tout ce qui suit s'applique sur mobile/tablette */
+  .section-presentation {
+    min-height: 200px;                                 /* Section moins haute sur mobile */
+    padding: 10px 0;                                   /* Moins d'espace autour */
+  }
+  .presentation-contenu {
+    max-width: 98%;                                    /* Presque toute la largeur de l'écran */
+    padding: 18px 5px;                                 /* Moins de padding */
+    border-radius: 8px;                                /* Bords un peu moins arrondis */
+  }
+  .presentation-contenu p {
+    font-size: 0.98rem;                                /* Texte un peu plus petit */
+  }
+  .btn-presentation {
+    font-size: 1rem;                                   /* Bouton plus petit */
+    padding: 10px 18px;                                /* Moins d'espace dans le bouton */
+  }
+}
+
+
+/*Responsive pour tourisme */
+@media (max-width: 700px) {
+  .section-plage {
+    min-height: 200px;
+    padding: 10px 0;
+  }
+  .plage-contenu {
+    max-width: 98%;
+    padding: 18px 5px 50px 5px;
+    border-radius: 8px;
+  }
+  .plage-contenu p {
+    font-size: 0.98rem;
+  }
+  .btn-plage {
+    font-size: 1rem;
+    padding: 10px 18px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    position: absolute;
+  }
+}
+
+/* Responsive pour footer*/
+@media (max-width: 800px) {
+  .footer-container {
+    flex-direction: column;           /* Les colonnes passent en colonne (vertical) */
+    align-items: flex-start;          /* Alignement à gauche */
+    gap: 18px;                        /* Moins d'espace entre les colonnes */
+  }
+  .footer-col {
+    width: 100%;                      /* Chaque colonne prend toute la largeur */
+    min-width: 0;                     /* Plus de largeur minimale */
+  }
+  .footer-map iframe {
+    min-width: 0;                     /* Plus de largeur minimale pour la carte */
+  }
+}
+
+/* Responsive de culture */
+@media (max-width: 800px) {
+  .section-paire, .section-impaire {
+    flex-direction: column !important;
+    gap: 15px;
+    text-align: center;
+    max-width: 98vw;
+    padding: 18px 5px;
+  }
+  .section-paire img, .section-impaire img {
+    width: 95vw;
+    max-width: 350px;
+    height: 120px;
+  }
+  .texte-section {
+    max-width: 95vw;
+  }
+  .navbar-list {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+  }
+  .navbar-list li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5cfa6;
+  }
+}
+
+
+/* responsive de tourisme */
+@media (max-width: 800px) {
+  .ligne-alternee {
+    flex-direction: column !important;   /* Passe en colonne sur mobile/tablette */
+    gap: 15px;
+    text-align: center;
+    max-width: 98vw;
+    padding: 18px 5px;
+  }
+  .img-alternee {
+    width: 95vw;
+    max-width: 350px;
+    height: 120px;
+  }
+  .texte-alternee {
+    max-width: 95vw;
+  }
+}
