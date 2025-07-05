@@ -24,10 +24,41 @@
   </nav>
 
 
+  <div class="formulaire-bassam">
+  <h2>Contactez la Commune de Grand-Bassam</h2>
+  <form>
+    <label for="nom">Nom complet :</label>
+    <input type="text" id="nom" name="nom" required>
 
+    <label for="quartier">Quartier :</label>
+    <select id="quartier" name="quartier" required>
+      <option value="">--Choisissez votre quartier--</option>
+      <option value="impérial">Impérial</option>
+      <option value="odoss">Odoss</option>
+      <option value="mockey-ville">Mockey-ville</option>
+      <option value="azuretti">Azuretti</option>
+      <option value="quartier-chic">Quartier Chic</option>
+      <option value="quartier-nouveau">Quartier Nouveau</option>
+      <option value="quartier-phare">Quartier du Phare</option>
+      <option value="autre">Autre</option>
+    </select>
 
+    <label for="motif">Motif de la demande :</label>
+    <select id="motif" name="motif" required>
+      <option value="">--Choisissez un motif--</option>
+      <option value="etat_civil">Demande d’acte de naissance</option>
+      <option value="reclamation">Problème d’eau ou d’électricité</option>
+      <option value="voirie">Voirie / Route abîmée</option>
+      <option value="culture">Suggestion pour un événement local</option>
+      <option value="autre">Autre</option>
+    </select>
 
+    <label for="message">Votre message :</label>
+    <textarea id="message" name="message" required placeholder="Écrivez votre message ici..."></textarea>
 
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
 
   <footer class="footer">
   <div class="footer-container">
@@ -60,17 +91,17 @@
 </footer>
 
 
-
-
-
-
- 
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
     integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
     crossorigin="anonymous"></script>
+    <script>
+document.querySelector('.formulaire-bassam form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Merci pour votre message ! La commune de Grand-Bassam vous répondra bientôt.');
+});
+</script>
 </body>
 </html>

@@ -430,6 +430,62 @@ h3{
   flex-direction: row-reverse; /* Texte à gauche, image à droite */
 }
 
+  /* css de contact  */
+.formulaire-bassam {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fffbe6;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  padding: 25px 18px;
+  font-family: Arial, sans-serif;
+}
+
+.formulaire-bassam h2 {
+  text-align: center;
+  color: #a97c50;
+  margin-bottom: 18px;
+}
+
+.formulaire-bassam label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  color: #333;
+}
+.formulaire-bassam input,
+.formulaire-bassam select,
+.formulaire-bassam textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d2b48c;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.formulaire-bassam textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+.formulaire-bassam button {
+  width: 100%;
+  background: #a97c50;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formulaire-bassam button:hover {
+  background: #7a5a36;
+}
+
 
 .footer {
   background: #232323;                
@@ -615,6 +671,20 @@ h3{
     position: absolute;
   }
 }
+
+/* css de contact  */
+@media (max-width: 600px) {
+  .formulaire-bassam {
+    padding: 12px 4vw;
+    max-width: 98vw;
+  }
+  .formulaire-bassam h2 {
+    font-size: 1.1rem;
+  }
+}
+
+
+
 
 /* Responsive pour footer*/
 @media (max-width: 800px) {
