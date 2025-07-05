@@ -308,6 +308,14 @@ h3{
   background: #7a5a36;
 }
 
+/* css de notre histoir */
+.rab{
+   min-height: 100vh;
+  background: url('/img/hist1.jpg') center/cover no-repeat fixed;
+  padding: 40px 0 0 0;
+  box-sizing: border-box;
+}
+
  /* css de nos cultures */
  /* Image de fond sur tout le contenu principal */
 .main-bg {
